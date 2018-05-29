@@ -22,10 +22,10 @@ img_x, img_y = 28, 28
 #LeNet-5
 model = Sequential()
 model.add(Conv3D(32, kernel_size=(5, 5), strides=(1, 1),
-                 activation='relu',
+                 activation=relu',
                  input_shape=None))
 model.add(MaxPooling3D())
-model.add(Conv2D()
+model.add(Conv3D()
 model.add(MaxPooling3D())
 model.add(Flatten())
 model.add(Dense())
@@ -35,4 +35,6 @@ model.add(Dense(num_classes, activation='softmax'))
 model.compile(optimizer=keras.optimizers.SGD(lr=0.01),
               loss='binary_crossentropy',
               metrics=['accuracy'])
+
+model.fit(
 

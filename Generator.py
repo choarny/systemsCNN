@@ -3,12 +3,14 @@ Training and Test Data Generator
 """
 import random
 import urllib.request
-#import os
-#os.mkdir("training", 
-#os.mkdir("test", 
+import os
+if not os.path.exists("training"):
+    os.makedirs("training")
+if not os.path.exists("test"):
+    os.makedirs("test") 
 
 #training data
-for i in range(60000):
+for i in range(10):
     tiling_resolution = 11
     column_num = random.randint(200, 400)
     row_num = random.randint(400, 800)
